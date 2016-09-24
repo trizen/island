@@ -50,7 +50,7 @@ def bern_diff { |n k d|
 def bernoulli_number { |n|
     if [one? n] [ return (div 1 2) ]
     if [odd? n] [ return 0         ]
-    if [gt n 0] [ call bern_diff (sub n 1) 0 1]
+    if [gt n 0] [ return (call bern_diff (sub n 1) 0 1) ]
     return 1
 }
 
