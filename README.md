@@ -2,11 +2,18 @@
 
 The Island programming language is a an experimental project for a uniformly design programming language.
 
-## Examples
+#### Main features of the language include:
+
+* Prefix notation
+* Multiple dispatch
+* Higher-order functions
+* Uniformity and simplicity
+
+### Examples
 
 The following examples illustrate some of the decisions made in the designing of the language.
 
-### Factorial
+#### Factorial
 
 ```python
 def fac { |n|
@@ -17,7 +24,7 @@ def fac { |n|
 say (call fac 10)    #=> 3628800
 ```
 
-### Fibonacci
+#### Fibonacci
 
 ```python
 def fib { |n|
@@ -28,9 +35,9 @@ def fib { |n|
 say (call fib 12)    #=> 144
 ```
 
-### `while` loop
+#### `while`-loop
 
-Signature: `while(Expr, Expr)`
+Multimethod: `while(Expr, Expr)`
 
 ```python
 def n 10
@@ -40,9 +47,19 @@ while [gt n 0] [
 ]
 ```
 
-### `for` loop
+#### `foreach`-loop
 
-Signature: `for(Expr, Expr, Expr, Expr)`
+Multimethod: `for(Range, Block)`
+
+```python
+for (range 1 10) { |n|
+    say n
+}
+```
+
+#### `for(;;)`-loop
+
+Multimethod: `for(Expr, Expr, Expr, Expr)`
 
 ```python
 for [def n 1] [lt n 10] [add! n 1] [
