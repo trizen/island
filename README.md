@@ -2,7 +2,7 @@
 
 The Island programming language is a an experimental project for a uniformly design programming language.
 
-#### Main features of the language include:
+The main features of the language include:
 
 * Prefix notation
 * Multiple dispatch
