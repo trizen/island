@@ -11,7 +11,7 @@ The Island programming language is a an experimental project for a uniformly des
 
 ### Examples
 
-The following examples illustrate some of the decisions made in the designing of the language.
+The following examples illustrate some of the decisions made in designing the syntax of the language.
 
 #### Factorial
 
