@@ -35,6 +35,33 @@ def fib { |n|
 say (call fib 12)    #=> 144
 ```
 
+#### Bernoulli numbers (recursive)
+
+```ruby
+def bern_helper { |n k|
+    mul (call binomial n k) (div (call bernoulli_number k) (add (sub n k) 1))
+}
+
+def bern_diff { |n k d|
+    if [lt n k] [ return d ]
+    call bern_diff n (add k 1) (sub d (call bern_helper (add n 1) k))
+}
+
+def bernoulli_number { |n|
+    if [one? n] [ return (div 1 2) ]
+    if [odd? n] [ return 0         ]
+    if [gt n 0] [ call bern_diff (sub n 1) 0 1]
+    return 1
+}
+
+for (range 0 25) { |i|
+    def num (call bernoulli_number i)
+    unless [zero? num] [
+        printf "B(%2d) = %20s / %s\n" i (nu num) (de num)
+    ]
+}
+```
+
 #### `while`-loop
 
 Multimethod: `while(Expr, Expr)`
@@ -65,31 +92,4 @@ Multimethod: `for(Expr, Expr, Expr, Expr)`
 for [def n 1] [lt n 10] [add! n 1] [
     say n
 ]
-```
-
-#### Bernoulli numbers (recursive)
-
-```python
-def bern_helper { |n k|
-    mul (call binomial n k) (div (call bernoulli_number k) (add (sub n k) 1))
-}
-
-def bern_diff { |n k d|
-    if [lt n k] [ return d ]
-    call bern_diff n (add k 1) (sub d (call bern_helper (add n 1) k))
-}
-
-def bernoulli_number { |n|
-    if [one? n] [ return (div 1 2) ]
-    if [odd? n] [ return 0         ]
-    if [gt n 0] [ call bern_diff (sub n 1) 0 1]
-    return 1
-}
-
-for (range 0 25) { |i|
-    def num (call bernoulli_number i)
-    unless [zero? num] [
-        printf "B(%2d) = %20s / %s\n" i (nu num) (de num)
-    ]
-}
 ```
