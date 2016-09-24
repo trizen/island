@@ -1,0 +1,10 @@
+
+#
+## `for` loop counting from 1 up to 10
+#
+
+# Info:
+#      `for` is a (Range, Block) function,
+#      `range` is a (Number, Number) function.
+
+for (range 1 10) { |n| say n }

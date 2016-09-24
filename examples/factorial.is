@@ -1,0 +1,11 @@
+
+#
+## Factorial function
+#
+
+def fac { |n|
+    if [eq n 0] [ return 1 ]
+    mul n (call fac (sub n 1))
+}
+
+say (call fac 10)    # prints: 3628800

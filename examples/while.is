@@ -1,0 +1,11 @@
+
+#
+## `while` loop counting from 10 down to 1
+## NOTE: `while` is an (Expr, Expr) function.
+#
+
+def n 10
+while [gt n 0] [
+    say n
+    sub! n 1
+]

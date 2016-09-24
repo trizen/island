@@ -1,0 +1,11 @@
+
+#
+## Conditional `for` loop
+#
+
+# Info:
+#      `for` is an (Expr, Expr, Expr, Expr) function.
+
+for [def n 1] [lt n 10] [add! n 1] [
+    say n
+]

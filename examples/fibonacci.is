@@ -1,0 +1,11 @@
+
+#
+## Fibonacci function
+#
+
+def fib { |n|
+    if [lt n 2] [ return n ]
+    add (call fib (sub n 1)) (call fib (sub n 2))
+}
+
+say (call fib 12)    # prints: 144
